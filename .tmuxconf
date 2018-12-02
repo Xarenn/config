@@ -1,0 +1,46 @@
+tmux set-option -g visual-activity off
+tmux set-option -g visual-bell off
+tmux set-option -g visual-silence off
+tmux set-window-option -g monitor-activity off
+tmux set-option -g bell-action none 
+#modes
+tmux setw -g clock-mode-colour colour06
+tmux setw -g mode-attr bold
+tmux setw -g mode-fg colour06
+tmux setw -g mode-bg colour18
+
+# panes
+tmux set -g pane-border-bg colour16
+tmux set -g pane-border-fg colour32
+tmux set -g pane-active-border-bg colour16
+tmux set -g pane-active-border-fg colour10
+
+# statusbar
+tmux set -g status-position bottom
+tmux set -g status-justify left
+tmux set -g status-bg colour08
+tmux set -g status-fg colour06
+tmux set -g status-attr dim
+tmux set -g status-left ''
+tmux set -g status-right '#[fg=colour15,bg=colour08,bold] %d/%m #[fg=colour15,bg=colour08,bold] %H:%M:%S '
+tmux set -g status-right-length 50
+tmux set -g status-left-length 20
+
+tmux setw -g window-status-current-fg colour06
+tmux setw -g window-status-current-bg colour00
+tmux setw -g window-status-current-attr bold
+tmux setw -g window-status-current-format ' #I#[fg=colour15]:#[fg=colour15]#W#[fg=colour06]#F '
+
+tmux setw -g window-status-fg colour3
+tmux setw -g window-status-bg colour00
+tmux setw -g window-status-attr none
+tmux setw -g window-status-format ' #I#[fg=colour07]:#[fg=colour07]#W#[fg=colour01]#F '
+
+tmux setw -g window-status-bell-attr bold
+tmux setw -g window-status-bell-fg colour3
+tmux setw -g window-status-bell-bg colour06
+
+# messages
+tmux set -g message-attr bold
+tmux set -g message-fg colour1
+tmux set -g message-bg colour16
