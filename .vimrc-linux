@@ -626,8 +626,17 @@ nnoremap ee <End>
 " di( write in normal mode not command
 nnoremap ff di(
 nnoremap ; ^
-nnoremap rr dd
+nnoremap rr d$
+nnoremap tt dw
 nmap a <Left>
 nmap d <Right>
 nmap w <Up>
 nmap s <Down>
+nnoremap l dd
+nnoremap <F1> b
+nnoremap <F2> w
+inoremap <silent> <C-d> <End>
+inoremap <silent> <C-a> <Home>
+inoremap <silent> <C-f> <ESC>di(<CR>
+inoremap <silent> <C-r> <ESC>d$<CR>
+inoremap <silent> <C-e> <ESC>dw<CR>
